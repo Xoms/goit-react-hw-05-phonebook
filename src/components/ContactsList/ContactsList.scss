@@ -1,0 +1,23 @@
+.contacts-list {
+    padding: 0;
+}
+
+.contacts-items-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 250ms linear; 
+}
+.contacts-items-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contacts-items-exit {
+    transition: all 250ms linear;
+    transform: translateX(0);
+    opacity: 1;
+}
+.contacts-items-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+}

@@ -1,0 +1,21 @@
+.contacts-list__item{
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.contacts-list__item-text{
+    display: block;
+    font-size: 20px;
+}
+
+.contacts-list__item-btn {
+    text-align: center;
+}
