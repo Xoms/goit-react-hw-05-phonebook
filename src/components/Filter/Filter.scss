@@ -16,3 +16,23 @@
 
     }
 }
+.filterErr-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 250ms linear; 
+  }
+  .filterErr-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+.filterErr-exit {
+    transition: all 250ms linear;
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .filterErr-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  

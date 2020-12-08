@@ -58,11 +58,13 @@ class App extends Component {
 
   render(){
     const {contacts, filter} = this.state
-    const visibleContacts = contacts.filter(({name}) => name.toLowerCase().includes(filter.toLowerCase()) )
+    
+    const visibleContacts = contacts.filter(({name}) => name.toLowerCase().includes(filter.toLowerCase()))
+    console.log(visibleContacts.length > 1)
     return (
       <Container className="container phonebook">
-        <CSSTransition in={true} 
-          appear={true}
+        <CSSTransition in={false} 
+          // appear={true}
           classNames="fade" 
           unmountOnExit 
           timeout={500}>
@@ -73,7 +75,9 @@ class App extends Component {
 
         <PhonesForm onContactAdd={this.onContactAdd} contacts={contacts}/>
         <Title title="Contacts" className="main-title"/>
-        <Filter onFilter={this.onFilterChange}/>
+        <Filter onFilter={this.onFilterChange} isVisible={contacts.length > 1}/>
+        
+        
         <ContactsList onContactDelete={this.onContactDelete} contacts={visibleContacts}/>
 
       </Container>
